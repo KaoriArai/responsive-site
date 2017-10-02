@@ -25,15 +25,18 @@ h1 {
   font-size: 200%;
   font-weight: bold;
   text-align: center;
-  margin: 20px 0; }
+  margin: 20px 0;
+  color: #696969; }
 
 h2 {
   font-size: 150%;
   font-weight: bold;
-  text-align: center; }
+  text-align: center;
+  color: #696969; }
 
-ul li {
-  padding: 10px 0 10px 30px; }
+ul {
+  padding: 30px;
+  list-style-type: disc; }
 
 /* Align
 --------------------------------------------------*/
@@ -43,41 +46,44 @@ ul li {
 /* header
 --------------------------------------------------*/
 .flexible-images {
-  max-width: 100%;
-  max-height: 500px;
+  width: 100%;
+  height: 500px;
   background-size: cover;
-  background-position: center center; }
+  background-position: center center;
+  background-image: url("../images/top01.jpg"); }
 
 /* Contents
 --------------------------------------------------*/
-main {
+contents {
   display: block;
   width: 100%;
   background-color: #fff0fa; }
-  main #checkPoint {
+  contents #checkPoint {
     display: -webkit-flex;
     display: flex;
     justify-content: space-between;
     -webkit-flex-direction: row;
     flex-direction: row; }
-  main .text-box {
+  contents .text-box {
     -webkit-flex: 1;
     flex: 1;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    main: 10px 0; }
-    main .text-box #title {
+    margin: 10px;
+    background-color: #028ed3; }
+    contents .text-box #title {
       display: block;
       background-color: #ffc04d;
-      margin: 10px 0 0;
       padding: 20px; }
-    main .text-box #text-method {
+    contents .text-box .text-method {
       background-color: #028ed3;
       color: #fff0fa;
       margin: 0;
-      padding: 10px 0 0 10px; }
-  main .clearfix::after {
+      padding: 10px;
+      text-align: left;
+      line-height: 150%; }
+  contents .clearfix::after {
     content: '';
     display: block;
     clear: both; }
@@ -88,18 +94,19 @@ footer {
   display: block;
   width: 100%;
   background-color: #ffc04d;
+  box-sizing: border-box;
+  text-align: center;
   padding: 10px;
-  text-align: center; }
+  margin-top: 10px; }
   footer .button-catcafe {
-    margin: auto;
-    margin-top: 20px;
+    margin: 10px auto 0;
     width: 200px;
     height: 30px;
     display: block;
     border-radius: 5px;
-    background-color: #015b87; }
+    background-color: #028ed3; }
     footer .button-catcafe p {
-      padding: 3px 0;
+      padding: 8px 0;
       text-align: center;
       vertical-align: middle;
       font-weight: bold;
