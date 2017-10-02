@@ -1,0 +1,131 @@
+@import "compass";
+
+// font-family
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// colors
+$baseColor: #fff0fa;
+$subColor: #015b87;
+$keyColor: #ffa500;
+$fontColor: #696969;
+
+/* Base
+--------------------------------------------------*/
+html{ font-size: 62.5%; }
+
+body{
+    font-size: 1.4rem;
+    font-family: $baseFontFamily;
+    background-color:#fff0fa;
+}
+
+a {
+  @include link-colors($keyColor, darken($keyColor, 15%), lighten($keyColor, 5%), darken($keyColor, 15%));
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+h1{
+  font-size: 200%;
+  font-weight: bold;
+  text-align:center;
+  margin: 20px 0;
+}
+
+h2{
+  font-size: 150%;
+  font-weight: bold;
+  text-align:center;
+}
+
+ul li{
+  padding: 10px 0 10px 30px;
+}
+
+/* Align
+--------------------------------------------------*/
+.text-method {
+  text-align: center;
+}
+
+// desktop
+/* header
+--------------------------------------------------*/
+.flexible-images{
+    max-width: 100%;
+    max-height: 500px;
+    background-size: cover;
+    background-position: center center
+}
+
+/* Contents
+--------------------------------------------------*/
+// Common Styles
+main{
+  display:block;
+  width: 100%;
+  background-color:$baseColor;
+
+  #checkPoint{
+    @include display-flex;
+    justify-content: space-between;
+    @include flex-direction(row); 
+  }
+
+  .text-box{
+    @include flex(1);
+    @include box-sizing(border-box);
+    main: 10px 0;
+
+    #title{
+      display: block;
+      background-color: lighten($keyColor, 15%);
+      margin: 10px 0 0;
+      padding: 20px;
+    }
+    #text-method{
+      background-color: lighten($subColor,15%);
+      color: $baseColor;
+      margin: 0;
+      padding: 10px 0 0 10px;
+    }
+    
+  }
+
+  .clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+/* footer
+--------------------------------------------------*/
+footer{
+    display: block;
+    width: 100%;
+    background-color: lighten($keyColor, 15%);
+    
+    padding : 10px;
+    text-align: center;
+
+  .button-catcafe{
+    margin: auto;
+    margin-top: 20px;
+    width: 200px;
+    height: 30px;
+    display: block;
+    border-radius: 5px;
+    background-color:$subColor;
+
+    p{
+      padding: 3px 0;
+      text-align: center;
+      vertical-align: middle;
+      font-weight: bold;
+      color:$baseColor;
+    }
+  }
+}
